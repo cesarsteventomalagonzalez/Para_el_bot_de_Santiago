@@ -1,0 +1,75 @@
+{% extends "index.html" %}
+{% load static %}
+{% block titulo %}
+    Cargo
+  {% endblock %}
+{% block contenido %}
+
+<main>
+  <section class="form-container">
+    <div class="form-header">
+      <h2>Formulario de Cargos</h2>
+    </div>
+    <form id="form-cargo" class="form">
+      <div class="form-group">
+          <label for="descipción">Cargos:
+              <input type="text"
+              name="descripción"
+              id="descipción"
+              placeholder="Ingrese el Cargo"
+              value=""
+              required/>
+          </label>
+      </div>
+      <div class="form-check">
+          <label>Activó
+              <input type="checkbox" id="activo" checked>
+          </label>
+      </div>
+      <button id="enviar" type="submit" name="enviar">
+          Guardar
+      </button>
+  </form>
+    <div class="consulta none table-responsive" id="consulta">
+        <h2>Listado de cargos</h2>
+        <table class="consulta-est" id="consult-est" border="1">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody class="detalle-est" id="destale-est">
+              <tr>
+                  <td>1</td>
+                  <td>Informatica</td>
+                  <td>Activo</td>
+                  <td>
+                      <button>✏️</button>
+                      <button>❌</button>
+                  </td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Analistica</td>
+                  <td>Activo</td>
+                  <td>
+                      <button>✏️</button>
+                      <button>❌</button>
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
+</main>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content"></div>
+
+</body>
+</html>
